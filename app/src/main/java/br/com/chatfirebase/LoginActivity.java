@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = mEditEmail.getText().toString();
                 String password = mEditPassword.getText().toString();
 
-                if( email == null || email.isEmpty() || password.isEmpty() ){
+                if( email == null || email.isEmpty() || password == null || password.isEmpty() ){
                     Toast.makeText(LoginActivity.this, "Nome, Senha e Email deve ser preenchiidos!", Toast.LENGTH_LONG).show();
                     return;
                 }
@@ -53,7 +53,13 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
-                                    Log.i("Erro", task.getResult().getUser().getUid()); }
+                                    Log.i("Erro", task.getResult().getUser().getUid());
+
+                                    Intent intent = new Intent(LoginActivity.this, MessagesActivity.class);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                    startActivity(intent);
+                                }
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

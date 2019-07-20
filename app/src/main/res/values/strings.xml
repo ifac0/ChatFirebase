@@ -2,4 +2,6 @@
     <string name="app_name">ChatFirebase</string>
     <string name="signIn">Não tem conta? Crie aqui</string>
     <string name="entrar">Entrar</string>
+    <string name="logout">Logout</string>
+    <string name="contacts">Contacts</string>
 </resources>

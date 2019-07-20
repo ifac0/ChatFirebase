@@ -97,7 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
     private  void createUser() {
         String nome = mEditUsername.getText().toString();
         String email  =  mEditEmail.getText().toString();
-        String senha = mEditEmail.getText().toString();
+        String senha = mEditPassword.getText().toString();
 
         if( nome == null || nome.isEmpty() || email == null || email.isEmpty() || senha.isEmpty() ){
             Toast.makeText(this, "Nome, Senha e Email deve ser preenchiidos!", Toast.LENGTH_LONG).show();
@@ -147,6 +147,12 @@ public class RegisterActivity extends AppCompatActivity {
                                             @Override
                                             public void onSuccess(DocumentReference documentReference) {
                                                 Log.i("Erro", documentReference.getId());
+
+                                                Intent intent = new Intent(RegisterActivity.this, MessagesActivity.class);
+                                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                                                startActivity(intent);
+
                                             }
                                         })
                                         .addOnFailureListener(new OnFailureListener() {
