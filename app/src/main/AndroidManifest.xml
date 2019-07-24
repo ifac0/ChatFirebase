@@ -9,10 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:label="@string/contacts"
-            android:name=".ContactsActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MessagesActivity"/>
+        <activity android:name=".ChatActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MessagesActivity" />
+        </activity>
+        <activity
+            android:name=".ContactsActivity"
+            android:label="@string/contacts">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MessagesActivity" />
         </activity>
         <activity android:name=".MessagesActivity">
             <intent-filter>
@@ -22,7 +29,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity"
+                  android:theme="@style/AppTheme.Login"   />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

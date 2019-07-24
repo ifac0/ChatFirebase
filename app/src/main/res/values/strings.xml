@@ -4,4 +4,6 @@
     <string name="entrar">Entrar</string>
     <string name="logout">Logout</string>
     <string name="contacts">Contacts</string>
+    <string name="btn_chat">Enviar</string>
+    <string name="mensagem">   Digite um mensagem</string>
 </resources>

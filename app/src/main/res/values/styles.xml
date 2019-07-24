@@ -8,4 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+	<style name="AppTheme.Login" parent="AppTheme">
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
 </resources>

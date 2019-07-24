@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
     <color name="bgColor">#F9F9F9</color>
+    <color name="gray">#E0E0E0</color>
+	
+	<color name="colorPrimary">#531755</color>
+    <color name="colorPrimaryDark">#48114A</color>
+    <color name="colorAccent">#E9A823</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="profile_bg">#F5F5F5</color>
+
+    <color name="text_primary">#0E2A47</color>
+    <color name="text_secondary">#8B8B8B</color>
+
+    <color name="button_bg">#ECECEC</color>
 </resources>
